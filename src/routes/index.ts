@@ -1,8 +1,9 @@
 import React from "react";
-import SignUp from '../components/pages/SignUp';
+import SignUp from '../components/pages/Login';
 import MainPage from "../components/pages/MainPage";
 import NavigateToMain from "./NavigateToMain";
 import NavigateToLogin from "./NavigateToLogin";
+import Login from "../components/pages/Login";
 
 
 interface IRoutes {
@@ -13,11 +14,11 @@ interface IRoutes {
 
 const enum RouteNames {
    LOGIN = '/login',
-   MAIN = '/'
+   MAIN = '/',
 }
 
 export const publicRoutes: IRoutes[] = [
-   {path: RouteNames.LOGIN, element: SignUp},
+   {path: RouteNames.LOGIN, element: Login},
    {path: "*", element: NavigateToLogin},
 ]
 
