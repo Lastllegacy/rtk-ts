@@ -1,5 +1,5 @@
 import React from "react";
-import Login from '../components/pages/Login';
+import SignUp from '../components/pages/SignUp';
 import MainPage from "../components/pages/MainPage";
 import NavigateToMain from "./NavigateToMain";
 import NavigateToLogin from "./NavigateToLogin";
@@ -17,7 +17,7 @@ const enum RouteNames {
 }
 
 export const publicRoutes: IRoutes[] = [
-   {path: RouteNames.LOGIN, element: Login},
+   {path: RouteNames.LOGIN, element: SignUp},
    {path: "*", element: NavigateToLogin},
 ]
 

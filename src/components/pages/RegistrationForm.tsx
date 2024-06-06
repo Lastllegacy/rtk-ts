@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button, Image, Row } from 'antd';
+import { Form, Input, Button } from 'antd';
 
 interface RegistrationFormValues {
    login: string;
@@ -19,14 +19,13 @@ interface RegistrationFormValues {
    };
  
    return (
-     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-       <div style={{width: '400px', padding: '20px', boxShadow: '0 4px 8px rgba(0,0,0,0.1)', borderRadius: '8px' }}>
          <Form
            form={form}
            name="registration"
+           layout='vertical'
+           style={{ maxWidth: 600}}
            initialValues={{ remember: true }}
            onFinish={onFinish}
-           style={{ maxWidth: 600}}
            onFinishFailed={onFinishFailed}
          >
            <Form.Item
@@ -34,8 +33,7 @@ interface RegistrationFormValues {
              label="Login"
              rules={[{ required: true, message: 'Please input your login!' }]}
            >
-            <Row gutter={15} />
-             <Input placeholder="Login" />
+             <Input placeholder="Input login" />
            </Form.Item>
  
            <Form.Item
@@ -43,7 +41,7 @@ interface RegistrationFormValues {
              label="Password"
              rules={[{ required: true, message: 'Please input your password!' }]}
            >
-             <Input.Password placeholder="Password" />
+             <Input.Password placeholder="Input password" />
            </Form.Item>
  
            <Form.Item
@@ -66,7 +64,7 @@ interface RegistrationFormValues {
                }),
              ]}
            >
-             <Input.Password placeholder="Password confirmation" />
+             <Input.Password placeholder="Input password again" />
            </Form.Item>
  
            <Form.Item>
@@ -75,8 +73,6 @@ interface RegistrationFormValues {
              </Button>
            </Form.Item>
          </Form>
-       </div>
-     </div>
    );
  };
  
